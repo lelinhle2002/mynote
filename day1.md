@@ -1,15 +1,7 @@
-## Hello world 
+## In Ra các số chẵn trong khoảng từ 1 đến 100
 
 ```cpp
 
-#include <iostream> 
 
-using namespace std;
-
-int main()
-{
-    cout << "Hello world!" << endl;
-    return 0;
-}
 
 ```
