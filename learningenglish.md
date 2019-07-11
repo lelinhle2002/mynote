@@ -19,4 +19,4 @@ grammar in use .pdf
 - when you can listen clearly, you can do the excercises in files
 - write down the sentences after listening.
 -------------------------------------------------------
-- we will have to do the test of the grammar, the vocabulary at the weekend.
+- we have to do the test of the grammar, the vocabulary at the weekend.
