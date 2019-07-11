@@ -40,3 +40,19 @@ int main()
 
 }
 ```
+13.In ra bảng cửu chương 
+```cpp
+int main()
+{
+
+    for(int so=1; so<=9; so++)
+    { cout<<"bang cuu chuong"<<so<<endl<<endl;
+
+        for(int i=0; i<=10; i++)
+        {
+
+            cout<<so<<"x"<<i<<"="<<so*i<<endl;
+        }
+    }
+}
+```
