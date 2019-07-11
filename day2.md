@@ -56,3 +56,28 @@ int main()
     }
 }
 ```
+6.	Viết chương trình nhập vào 1 số n và in ra màn hình các số nguyên tố trong khoảng từ 1 tới 2n.
+```cpp
+int main()
+{
+    int n;
+    cin>>n;
+    for(int j = 1 ; j <2*n; j++)
+    {
+
+
+        int demuoc=0;
+        for(int i=1;i<=j;i++)
+        {
+            if(j%i==0)
+            {
+                demuoc=demuoc+1;
+            }
+        }
+        if (demuoc==2)
+        {
+            cout<<j<<endl;
+        }
+    }
+}
+```
