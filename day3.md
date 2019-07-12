@@ -56,3 +56,20 @@ int main()
 
 }
 ```
+8.	Số chính phương là số mà căn bậc hai của nó là 1 số nguyên dương. Viết chương trình nhập vào một số nguyên dương n và cho biết trong khoảng từ 1 tới 2n có bao nhiêu số chính phương. Hãy in ra dãy số chính phương đó.
+```cpp
+int main()
+{   int n;
+    cout<<"nhap n"<<endl;
+    cin>>n;
+    for(int i=1;i<=2*n;i++)
+    {
+        int a=sqrt(i);
+        float b=sqrt(i);
+        if(a==b)
+        {
+            cout<<i<<endl;
+        }
+    }
+}
+```
