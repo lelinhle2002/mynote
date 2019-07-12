@@ -40,3 +40,19 @@ int main()
     }
 }
 ```
+9.	Viết chương trình tìm ra số lũy thừa 2 đầu tiên lớn hơn 1000.
+```cpp
+int main()
+{
+    int i = 0;
+    while(true){
+        double a = pow(i, 2);
+        if(a > 1000){
+            cout<<"so dau tien luy thua 2 lon hon 1000 la = "<<i;
+            break;
+        }
+        i++;
+    }
+
+}
+```
