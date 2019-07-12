@@ -73,3 +73,32 @@ int main()
     }
 }
 ```
+14.	Viết chương trình nhập vào 2 số nguyên dương a,b tìm và in ra màn hình ước chung của chúng.
+```cpp
+int main()
+{
+    int a, b;
+    cin>>a>>b;
+
+    if(a > b)
+    {
+        int c = a;
+        a = b;
+        b = c;
+
+    }
+
+
+    int i = 1;
+
+    while(i<b)
+    {
+
+        if(a%i==0&&b%i==0)
+        {
+            cout<<i<<endl;
+        }
+        i++;
+    }
+}
+```
