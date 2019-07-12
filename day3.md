@@ -1,14 +1,21 @@
 5.	Viết chương trình nhập vào số nguyên dương n và in ra màn hình tổng các số chẵn khoảng từ 1 tới n.
 ```cpp
 int main()
-{   int n;
-    cout << "nhap n"<<endl;
+{
+    int n;
+    cout<<"nhap n"<<endl;
     cin>>n;
-    for(int i=0;i<=n;i+=2)
+    int tong=0;
+    for(int i=1;i<=n;i++)
     {
-        cout<<i<<endl;
+        if(i%2==0)
+        {
+            tong=tong+i;
+        }
     }
+    cout<<"tong cac so chan tu 1 den n"<<tong;
 }
+
 ```
 7.	Viết chương trình nhập vào 2 số a,b và in ra màn hình các số nguyên tố trong khoảng bị giới hạn bởi a và b (Mọi người lưu ý là a,b nhập ngẫu nhiên nhé!)
 ```cpp
