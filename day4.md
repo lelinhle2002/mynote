@@ -78,3 +78,45 @@ int main()
 
 }
 ```
+4.	Cho mảng 1 chiều gồm n phần tử nguyên, kiểm tra và in ra màn hình những phần tử là số nguyên tố hoặc là số chính phương.
+```cpp
+int main()
+{
+    int n;
+    cout<<"nhap n"<<endl;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"a["<<i<<"]=";
+        cin>>a[i];
+    }
+    int demuoc=0;
+    for(int i=1;i<n;i++)
+    {
+        if(a[i]%i==0)
+        {
+            demuoc=demuoc+1;
+        }
+    }
+    int songuyento=0;
+    if(demuoc==2)
+    {
+        songuyento=songuyento+1;
+    }
+    cout<<"so cac so nguyen to la "<<songuyento;
+    int x,y;
+    int sochinhphuong=0;
+    for(int i=0;i<n;i++)
+    {
+        float x= sqrt(a[i]);
+        int y=sqrt(a[i]);
+        if (x==y)
+        {
+            sochinhphuong=sochinhphuong+1;
+        }
+    }
+    cout<<"so chinh phuong la "<<sochinhphuong;
+
+}
+```
