@@ -25,3 +25,31 @@ int main()
     return 0;
 }
 ```
+2.	Cho mảng một chiều n phần tử nguyên, nhập và in ra màn hình xem mảng có bao nhiêu phần tử âm và bao nhiêu phần tử dương.
+```cpp
+int main()
+{
+    int n;
+    cout<<"nhap n"<<endl;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"a["<<i<<"]=";
+        cin>>a[i];
+    }
+    int phantuam=0;
+    int phantuduong=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>0)
+        {
+            phantuduong=phantuduong+1;
+        }
+        else phantuam=phantuam+1;
+    }
+    cout<<"phan tu am = "<<phantuam;
+    cout<<"phan tu duong = "<<phantuduong;
+
+}
+```
