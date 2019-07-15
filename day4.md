@@ -53,3 +53,28 @@ int main()
 
 }
 ```
+3.	Cho mảng 1 chiều n phần tử nguyên, nhập và in ra màn hình kiểm tra xem trong mảng có bao nhiêu phần tử là ước của n.
+```cpp
+int main()
+{
+    int n;
+    cout<<"nhap n"<<endl;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cout<<"a["<<i<<"]=";
+        cin>>a[i];
+    }
+    int uoc=0;
+    for(int i=0;i<=n;i++)
+    {
+        if(n%a[i]==0)
+        {
+            uoc=uoc+1;
+        }
+    }
+        cout<<"uoc cua a = "<<uoc;
+
+}
+```
