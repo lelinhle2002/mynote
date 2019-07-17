@@ -54,3 +54,59 @@ int main()
     xuatsnt(a,n);
 }
 ```
+2. viết phương trình nhập n tọa dộ (x,y). tìm 2 tọa độ có khaongr cách lớn nhất in ra màn hình.
+```cpp
+using namespace std;
+int x[100];
+int y[100];
+double dodai(int i, int j)
+{
+    double kq=sqrt(pow(x[j]-x[i],2)+ pow(y[j]-y[i],2));
+    return kq;
+}
+
+
+void nhap_n_diem(int n)
+{
+    for(int i =0; i<n; i++)
+    {
+        cout<<"nhap vao toa do (x, y)"<<endl;
+        cin>>x[i];
+        cin>>y[i];
+    }
+}
+int main()
+{
+
+    int n = 0;
+    cout<<"nhap vao n ="<<endl;
+    cin>>n;
+
+    nhap_n_diem(n);
+    int imax = 0;
+    int jmax = 0;
+    double do_dai_max = 0;
+    for(int i=0; i< n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            double ketqua = dodai(i, j);
+            if(ketqua > do_dai_max)
+            {
+                do_dai_max = ketqua;
+                jmax = j;
+                imax = i;
+            }
+        }
+    }
+
+
+    cout<<"imax="<<imax<<endl;
+    cout<<"jmax="<<jmax<<endl;
+
+    cout<<"Diem 1 la="<<endl;
+    cout<<"("<<x[imax]<<", "<<y[imax]<<")"<<endl;
+    cout<<"Diem 2 la="<<endl;
+    cout<<"("<<x[jmax]<<", "<<y[jmax]<<")"<<endl;
+}
+```
