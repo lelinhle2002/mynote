@@ -110,3 +110,20 @@ int main()
     cout<<"("<<x[jmax]<<", "<<y[jmax]<<")"<<endl;
 }
 ```
+3. Xây dựng chương trình: Nhập số tự nhiên n có 4 chữ số. Hãy tìm và in ra màn hình chữ số hàng nghìn, hàng trăm, hàng chục, hàng đơn vị của n. 
+```cpp
+int main()
+{
+    int n;
+    cout<<"nhap so tu nhien n"<<endl;
+    cin>>n;
+    int a=n/1000;
+    int b=n%1000/100;
+    int c=n%1000%100/10;
+    int d=n%10;
+    cout<<"chu so hang nghin: "<<a<<endl;
+    cout<<"chu so hang tram: "<<b<<endl;
+    cout<<"chu so hang chuc: "<<c<<endl;
+    cout<<"chu so hang don vi: "<<d<<endl;
+}
+```
