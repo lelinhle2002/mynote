@@ -52,3 +52,50 @@ int main()
    xuatsohoanhao(a,n);
 }
 ```
+1.	Viết chương trình nhập vào dãy n phần tử và in ra các phần tử theo thứ tự ngược lại quá trình nhập. Số nhập đầu tiên sẽ in ra sau cùng.
+```cpp
+void nhapmang(int a[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+        cout<<"a["<<i<<"]=";
+        cin>>a[i];
+    }
+}
+void xuatmang(int a[], int n)
+{
+    for(int i=0;i<n; i++)
+    {
+       cout<<a[i]<<" ";
+    }
+}
+void sapxep(int a[], int n)
+{
+    int k=0;
+    for(int i=0; i<n-1; i++)
+    {
+        for(int j=i+1; j<n; j++)
+
+            {
+                k=a[i];
+                a[i]=a[j];
+                a[j]=k;
+            }
+
+
+    }
+}
+int main()
+{
+    int a[100];
+    int n;
+    cout << "nhap n" << endl;
+    cin>>n;
+    nhapmang(a,n);
+    xuatmang(a,n);
+    sapxep(a,n);
+    cout<<"sau khi sap xep ";
+    xuatmang(a,n);
+    return 0;
+}
+```
