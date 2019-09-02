@@ -4,7 +4,7 @@
 #include<math.h>
 
 using namespace std;
-float x[100],y[100];
+
 struct diemtoado
 {
     int x;
@@ -29,7 +29,7 @@ double khoangcach(diemtoado d1, diemtoado d2)
 }
 int main()
 {
-    diemtoado x, y;
+    diemtoado A,B;
     float khoangcach;
     cout<<"diem A:";
     nhaptoado(x);
@@ -41,5 +41,32 @@ int main()
     xuattoado(y);
     cout << "khoang cach giua 2 diem A,B: " << khoangcach;
     return 0;
+}
+```
+2. chữa
+```cpp
+#include <bits/stdtr1c++.h>
+
+using namespace std;
+typedef struct diemtoado
+{
+    double x;
+    double y;
+};
+double khoangcach(diemtoado d1, diemtoado d2)
+{
+    double kc;
+    kc= sqrt((d1.x-d2.x)*(d1.x-d2.x)+(d1.y-d2.y)*(d1.y-d2.y));
+    return kc;
+}
+int main()
+{
+   diemtoado A,B;
+   cout<<"nhap tao do diem A:"<<endl;
+   cin>>A.x>>A.y;
+   cout<<"nhap toa do diem B:"<<endl;
+   cin>>B.x>>B.y;
+   cout<<"khoang cach giua hai diem A va B la:"<<khoangcach(A,B);
+   return 0;
 }
 ```
