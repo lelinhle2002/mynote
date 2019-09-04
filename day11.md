@@ -28,7 +28,7 @@ void thaythe(int a[], int n, int x)
         }
     }
 }
-void chen(int a[], int n, int x)
+void chen(int a[], int &n, int x)
 {
     for(int i=n; i>=x+2; i-- )
     {
