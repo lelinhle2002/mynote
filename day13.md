@@ -216,3 +216,102 @@ int main()
     inradn(dsy, n);
 }
 ```
+4.
+```cpp
+using namespace std;
+struct doanh_nghiep
+{
+    char madoanhnghiep[30];
+    char giamdoc[30];
+    float vondieule;
+    float sonhanvien;
+};
+void nhap1dn(doanh_nghiep &x)
+{
+    cout<<"\n\nnhap ma doanh  nghiep: ";
+    fflush(stdin);
+    gets(x.madoanhnghiep);
+    cout<<"nhap ten giam doc: ";
+    fflush(stdin);
+    gets(x.giamdoc);
+    cout<<"nhap so von dieu le: ";
+    cin>>x.vondieule;
+    cout<<"nhap so nhan vien: ";;
+    cin>>x.sonhanvien;
+}
+void xuatdn(doanh_nghiep x)
+{
+    cout<<"\n\nma doanh nghiep : "<<x.madoanhnghiep<<endl;
+    cout<<"giam doc : "<<x.giamdoc<<endl;
+    cout<<"von dieu le : "<<x.vondieule<<endl;
+    cout<<"so nhan vien : "<<x.sonhanvien<<endl;
+}
+void nhap1ds( doanh_nghiep ds[], int n)
+{
+    for(int i=0; i<n ; i++)
+    {
+        nhap1dn(ds[i]);
+    }
+}
+void xuat1ds( doanh_nghiep ds[], int n)
+{
+    for(int i=0; i<n ; i++)
+    {
+        xuatdn(ds[i]);
+    }
+}
+void sapxep(doanh_nghiep ds[], int n)
+{
+    doanh_nghiep k;
+    for(int i=0; i<n-1; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if(ds[i].vondieule > ds[j].vondieule)
+            {
+                k=ds[i];
+                ds[i]=ds[j];
+                ds[j]=k;
+            }
+        }
+    }
+}
+void nhapdn(doanh_nghiep x)
+{
+    cout<<"ma doanh nghiep: "<<x.madoanhnghiep<<endl;
+    cout<<"so nhan vien: "<<x.sonhanvien<<endl;
+}
+int kiemtradaucach(char madoanhnghiep[])
+{
+    for(int i=0; i<strlen(madoanhnghiep); i++)
+    {
+        if(madoanhnghiep[i]==' ')
+            return 1;
+    }
+    return 0;
+}
+void tong(doanh_nghiep ds[], int n)
+{
+    int sum=0;
+    for(int i=0; i<n ; i++)
+    {
+        if(ds[i].vondieule<10||kiemtradaucach(ds[i].madoanhnghiep)==1)
+        {
+            sum=sum+1;
+        }
+    cout<<" so doanh nghiep ko hop le: "<<sum<<endl;
+}
+int main()
+{
+    doanh_nghiep dsy[100];
+    int n;
+    cout<<"nhap n ";
+    cin>>n;
+    nhap1ds(dsy, n);
+    xuat1ds(dsy, n);
+    sapxep(dsy, n);
+    cout<<"\n\nsau khi sap xep: \n\n"<<endl;
+    xuat1ds(dsy,n);
+    tong(dsy, n);
+}
+```
