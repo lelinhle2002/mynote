@@ -218,7 +218,6 @@ int main()
 ```
 4.
 ```cpp
-using namespace std;
 struct doanh_nghiep
 {
     char madoanhnghiep[30];
@@ -281,6 +280,16 @@ void nhapdn(doanh_nghiep x)
     cout<<"ma doanh nghiep: "<<x.madoanhnghiep<<endl;
     cout<<"so nhan vien: "<<x.sonhanvien<<endl;
 }
+void inradn(doanh_nghiep ds[], int n)
+{
+    for(int i=0; i<n ; i++)
+    {
+        if(ds[i].sonhanvien>300&&ds[i].madoanhnghiep[0]=='D'&&ds[i].madoanhnghiep[1]=='N')
+        {
+            nhapdn(ds[i]);
+        }
+    }
+}
 int kiemtradaucach(char madoanhnghiep[])
 {
     for(int i=0; i<strlen(madoanhnghiep); i++)
@@ -299,6 +308,7 @@ void tong(doanh_nghiep ds[], int n)
         {
             sum=sum+1;
         }
+    }
     cout<<" so doanh nghiep ko hop le: "<<sum<<endl;
 }
 int main()
@@ -312,6 +322,7 @@ int main()
     sapxep(dsy, n);
     cout<<"\n\nsau khi sap xep: \n\n"<<endl;
     xuat1ds(dsy,n);
-    tong(dsy, n);
+    cout<<"\n\nin ra so nhan vien > 300 va madoanhnghiep bat dau =DN "<<endl;
+    tong(dsy,n);
 }
 ```
