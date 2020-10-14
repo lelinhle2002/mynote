@@ -1,3 +1,4 @@
+```ads
 with Simulation ;
 procedure MISSION1 is
 package S renames Simulation ;
@@ -34,3 +35,4 @@ end TESTER_ROULAGE ;
 begin
 Tester_Roulage ;
 end MISSION1 ;
+```
