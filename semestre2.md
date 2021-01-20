@@ -69,7 +69,7 @@ procedure Mission1 is
 end Mission1 ;
 ```
 3.
-```cpp
+```adb
 with GAda.Text_IO ;
 with Rois;
 procedure Mission1 is
