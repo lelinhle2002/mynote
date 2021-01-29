@@ -106,3 +106,43 @@ procedure Mission1 is
 
 end Mission1 ;
 ```
+4.
+```adb
+with GAda.Text_IO ;
+with Rois;
+procedure Mission1 is
+         procedure Tracer_Damier ( Largeur : integer; Hauteur: integer) is
+                 a: string:="#";
+                 b: string:=" ";
+                  begin
+                  for x in 1..hauteur loop 
+                     if x mod 4 = 2 or x mod 4 = 1   then
+                      for i in 1..largeur loop
+                        if i mod 4 = 2 or i mod 4 = 1 then
+                            GAda.Text_IO.put(b);
+                        else if i mod 4 = 0 or i mod 4=3 then GAda.Text_IO.put(a);
+                        end if;
+                        end if;
+                      end loop;
+                                GAda.Text_IO.new_line;
+                     else if x mod 4 = 0 or x mod 4=3 then
+                       for i in 1..largeur loop
+                         if i mod 4 = 2 or i mod 4 =1 then
+                            GAda.Text_IO.put(a);
+                        else if i mod 4 = 0 or i mod 4=3 then GAda.Text_IO.put(b);
+                        end if;
+                      end if;
+                      end loop;
+                      GAda.Text_IO.new_line;
+                   end if;
+                   end if; 
+                   end loop;
+         end Tracer_Damier;
+        begin
+                   Tracer_Damier(18,10);
+                   --Tracer_Damier(6,5);
+                   --Tracer_Damier(14,2);
+         
+
+end Mission1 ;
+```
